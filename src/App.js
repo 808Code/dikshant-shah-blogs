@@ -136,7 +136,7 @@ function Post({ title, image, url, website }) {
 
 function App() {
   useEffect(() => {
-    document.title = "dikshantshah.";
+    document.title = "dikshantshah";
   }, []);
 
   return (
