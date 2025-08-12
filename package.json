@@ -1,6 +1,6 @@
 {
-  "homepage": "https://808Code.github.io/personal-blog",
   "name": "personal-blog",
+  "homepage": "https://808Code.github.io/personal-blog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
