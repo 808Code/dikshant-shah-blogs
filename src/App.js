@@ -106,7 +106,7 @@ function Post({ title, image, url, website }) {
       title={`${title} — ${website}`}
     >
       <img
-        src={image}
+        src={`${process.env.PUBLIC_URL}${image}`}
         alt={title}
         style={{ width: "100%", height: 130, objectFit: "cover" }}
       />
