@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+// Full posts list (unchanged content from your original)
 const posts = [
   {
     id: 10,
@@ -80,6 +81,18 @@ const posts = [
   },
 ];
 
+const PALETTE = {
+  bg: "#0b0f14",
+  text: "#e5e7eb",
+  subtext: "#9ca3af",
+  muted: "#94a3b8",
+  cardBg: "#0f172a",
+  border: "#1f2937",
+  shadow: "rgba(0,0,0,0.6)",
+  accent: "#22d3ee",
+  imgBg: "#0b1220",
+};
+
 function Post({ title, image, url, website }) {
   return (
     <a
@@ -95,9 +108,9 @@ function Post({ title, image, url, website }) {
         marginRight: 16,
         borderRadius: 8,
         overflow: "hidden",
-        boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
-        background: "#fff",
-        border: "1px solid #ddd",
+        boxShadow: `0 2px 8px ${PALETTE.shadow}`,
+        background: PALETTE.cardBg,
+        border: `1px solid ${PALETTE.border}`,
         transition: "transform 0.2s",
         flexShrink: 0,
       }}
@@ -105,16 +118,19 @@ function Post({ title, image, url, website }) {
       onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       title={`${title} — ${website}`}
     >
-      <img
-        src={`${process.env.PUBLIC_URL}${image}`}
-        alt={title}
-        style={{ width: "100%", height: 130, objectFit: "cover" }}
-      />
+      <div style={{ backgroundColor: PALETTE.imgBg }}>
+        <img
+          src={`${process.env.PUBLIC_URL}${image}`}
+          alt={title}
+          style={{ width: "100%", height: 130, objectFit: "cover", display: "block" }}
+        />
+      </div>
       <div style={{ padding: "0.5rem 1rem" }}>
         <h2
           style={{
             margin: 0,
             fontSize: "1rem",
+            color: PALETTE.text,
           }}
         >
           {title}
@@ -123,7 +139,7 @@ function Post({ title, image, url, website }) {
           style={{
             margin: "0.25rem 0 0 0",
             fontSize: "0.75rem",
-            color: "#888",
+            color: PALETTE.subtext,
             fontStyle: "normal",
           }}
         >
@@ -134,7 +150,7 @@ function Post({ title, image, url, website }) {
   );
 }
 
-function App() {
+export default function App() {
   useEffect(() => {
     document.title = "dikshantshah";
   }, []);
@@ -143,14 +159,34 @@ function App() {
     <div
       style={{
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundColor: "#fafafa",
+        backgroundColor: PALETTE.bg,
+        color: PALETTE.text,
         minHeight: "100vh",
         padding: "2rem",
       }}
     >
+      {/* Inline CSS so you don't need an external styles.css */}
+      <style>{`
+        ::-webkit-scrollbar {
+          height: 8px;
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: ${PALETTE.bg};
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: ${PALETTE.border};
+          border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background-color: ${PALETTE.border};
+        }
+        * { scrollbar-width: thin; scrollbar-color: ${PALETTE.border} ${PALETTE.bg}; }
+      `}</style>
+
       <header style={{ textAlign: "center", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2.5rem", margin: 0 }}>dikshant shah.</h1>
-        <p style={{ color: "#777", marginTop: "0.25rem" }}>
+        <h1 style={{ fontSize: "2.5rem", margin: 0, color: PALETTE.text }}>dikshant shah.</h1>
+        <p style={{ color: PALETTE.subtext, marginTop: "0.25rem" }}>
           build something you yourself would use.
         </p>
       </header>
@@ -186,7 +222,7 @@ function App() {
         style={{
           marginTop: "3rem",
           textAlign: "center",
-          color: "#aaa",
+          color: PALETTE.muted,
           fontSize: "0.9rem",
         }}
       >
@@ -195,5 +231,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
