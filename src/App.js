@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-// Full posts list (unchanged content from your original)
+// Full posts list
 const posts = [
   {
     id: 10,
@@ -126,23 +126,8 @@ function Post({ title, image, url, website }) {
         />
       </div>
       <div style={{ padding: "0.5rem 1rem" }}>
-        <h2
-          style={{
-            margin: 0,
-            fontSize: "1rem",
-            color: PALETTE.text,
-          }}
-        >
-          {title}
-        </h2>
-        <p
-          style={{
-            margin: "0.25rem 0 0 0",
-            fontSize: "0.75rem",
-            color: PALETTE.subtext,
-            fontStyle: "normal",
-          }}
-        >
+        <h2 style={{ margin: 0, fontSize: "1rem", color: PALETTE.text }}>{title}</h2>
+        <p style={{ margin: "0.25rem 0 0 0", fontSize: "0.75rem", color: PALETTE.subtext }}>
           {website}
         </p>
       </div>
@@ -159,28 +144,46 @@ export default function App() {
     <div
       style={{
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-        backgroundColor: PALETTE.bg,
-        color: PALETTE.text,
         minHeight: "100vh",
         padding: "2rem",
       }}
     >
-      {/* Inline CSS so you don't need an external styles.css */}
+      {/* Global styles for body, html, and scrollbars */}
       <style>{`
-        ::-webkit-scrollbar {
-          height: 8px;
-          width: 8px;
+        html, body, #root {
+          margin: 0;
+          padding: 0;
+          background: ${PALETTE.bg};
+          color: ${PALETTE.text};
+          width: 100%;
+          height: 100%;
         }
-        ::-webkit-scrollbar-track {
+
+        /* Vertical scrollbars */
+        ::-webkit-scrollbar:vertical {
+          width: 8px;
+          height: 8px;
+        }
+        ::-webkit-scrollbar-track:vertical {
           background: ${PALETTE.bg};
         }
-        ::-webkit-scrollbar-thumb {
+        ::-webkit-scrollbar-thumb:vertical {
           background-color: ${PALETTE.border};
           border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-          background-color: ${PALETTE.border};
+
+        /* Horizontal scrollbars */
+        ::-webkit-scrollbar:horizontal {
+          height: 8px;
         }
+        ::-webkit-scrollbar-track:horizontal {
+          background: ${PALETTE.bg};
+        }
+        ::-webkit-scrollbar-thumb:horizontal {
+          background-color: ${PALETTE.border};
+          border-radius: 4px;
+        }
+
         * { scrollbar-width: thin; scrollbar-color: ${PALETTE.border} ${PALETTE.bg}; }
       `}</style>
 
@@ -204,15 +207,9 @@ export default function App() {
           >
             {posts
               .slice()
-              .sort((a, b) => b.id - a.id) // sort descending by id
+              .sort((a, b) => b.id - a.id)
               .map(({ id, title, image, url, website }) => (
-                <Post
-                  key={`${website}-${id}`}
-                  title={title}
-                  image={image}
-                  url={url}
-                  website={website}
-                />
+                <Post key={`${website}-${id}`} title={title} image={image} url={url} website={website} />
               ))}
           </div>
         </section>
