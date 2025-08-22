@@ -3,6 +3,13 @@ import React, { useEffect } from "react";
 // Full posts list
 const posts = [
   {
+    id: 11,
+    website: "roboflow.com",
+    title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
+    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM",
+    url: "https://blog.roboflow.com/ai-shelf-price-verification/",
+  },
+  {
     id: 10,
     website: "roboflow.com",
     title: "Automate Image Background Blurring Using SAM 2",
@@ -14,7 +21,7 @@ const posts = [
     website: "roboflow.com",
     title: "AI-Powered Invoice Analysis for Detecting Price Markups",
     image: "/roboflow/Screenshot-2025-08-11-at-11.01.02---AM.webp",
-    url: "https://blog.roboflow.com/automated-invoice-analysis/#automate-invoice-processing-with-ai-conclusion",
+    url: "https://blog.roboflow.com/automated-invoice-analysis/",
   },
   {
     id: 8,
