@@ -6,7 +6,7 @@ const posts = [
     id: 11,
     website: "roboflow.com",
     title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
-    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM",
+    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
     url: "https://blog.roboflow.com/ai-shelf-price-verification/",
   },
   {
