@@ -3,6 +3,13 @@ import React, { useEffect } from "react";
 // Full posts list
 const posts = [
   {
+    id: 12,
+    website: "roboflow.com",
+    title: "Automate Marathon Bib Number Recognition with Computer Vision",
+    image: "/roboflow/Screenshot-2025-08-28-at-4.09.13---PM.webp",
+    url: "https://blog.roboflow.com/automated-marathon-bib-recognition/",
+  },
+  {
     id: 11,
     website: "roboflow.com",
     title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
