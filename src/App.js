@@ -3,18 +3,25 @@ import React, { useEffect } from "react";
 // Full posts list
 const posts = [
   {
-    id: 12,
+    id: 13,
     website: "roboflow.com",
     title: "Automate Marathon Bib Number Recognition with Computer Vision",
     image: "/roboflow/Screenshot-2025-08-28-at-4.09.13---PM.webp",
     url: "https://blog.roboflow.com/automated-marathon-bib-recognition/",
   },
   {
-    id: 11,
+    id: 12,
     website: "roboflow.com",
     title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
     image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
     url: "https://blog.roboflow.com/ai-shelf-price-verification/",
+  },
+    {
+    id: 11,
+    website: "roboflow.com",
+    title: "Prompting Tips for Large Language Models with Vision Capabilities",
+    image: "/roboflow/Screenshot-2025-09-08-at-4.22.43---PM.webp",
+    url: "https://blog.roboflow.com/prompting-tips-for-large-language-models-with-vision/",
   },
   {
     id: 10,
