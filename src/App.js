@@ -3,98 +3,90 @@ import React, { useEffect } from "react";
 // Full posts list
 const posts = [
   {
-    id: 13,
+    website: "roboflow.com",
+    title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
+    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
+    url: "https://blog.roboflow.com/ai-shelf-price-verification/",
+  },
+  {
     website: "roboflow.com",
     title: "Automate Marathon Bib Number Recognition with Computer Vision",
     image: "/roboflow/Screenshot-2025-08-28-at-4.09.13---PM.webp",
     url: "https://blog.roboflow.com/automated-marathon-bib-recognition/",
   },
   {
-    id: 12,
     website: "roboflow.com",
-    title: "AI-Powered Shelf Price Verification: Matching Labels to POS Data",
-    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
-    url: "https://blog.roboflow.com/ai-shelf-price-verification/",
+    title: "How to Build a Vision-Language Model Application with Next.js",
+    image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
+    url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
   },
-    {
-    id: 11,
+  {
     website: "roboflow.com",
     title: "Prompting Tips for Large Language Models with Vision Capabilities",
     image: "/roboflow/Screenshot-2025-09-08-at-4.22.43---PM.webp",
     url: "https://blog.roboflow.com/prompting-tips-for-large-language-models-with-vision/",
   },
   {
-    id: 10,
     website: "roboflow.com",
     title: "Automate Image Background Blurring Using SAM 2",
     image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
     url: "https://blog.roboflow.com/background-blurring-sam-2/",
   },
   {
-    id: 9,
     website: "roboflow.com",
     title: "AI-Powered Invoice Analysis for Detecting Price Markups",
     image: "/roboflow/Screenshot-2025-08-11-at-11.01.02---AM.webp",
     url: "https://blog.roboflow.com/automated-invoice-analysis/",
   },
   {
-    id: 8,
     website: "sievedata.com",
     title: "Building a robust ball tracking system for sports with SAM 2",
     image: "/sievedata/a-segmentation-map-of-sports-field-with-a-ball-bei.webp",
     url: "https://www.sievedata.com/blog/ball-tracking-with-sam2",
   },
   {
-    id: 7,
     website: "sievedata.com",
     title: "Building an Automated Background and Caption Effects Pipeline",
     image: "/sievedata/minimalist-silhouette-of-a-person-against-a-bold-w.webp",
     url: "https://www.sievedata.com/blog/automated-background-and-caption-effects-pipeline",
   },
   {
-    id: 6,
     website: "sievedata.com",
     title: "Comparing the best methods for OCR on videos",
     image: "/sievedata/a-magnifying-glass-show-over-a-video-with-various-.webp",
     url: "https://www.sievedata.com/blog/video-ocr-guide",
   },
   {
-    id: 5,
     website: "sievedata.com",
     title: "How to Build a Long Form Video Repurposing Tool",
     image: "/sievedata/a-roll-of-video-tape-with-a-knife-next-to-it.webp",
     url: "https://www.sievedata.com/resources/how-to-build-long-form-video-repurposing-tool",
   },
   {
-    id: 4,
     website: "sievedata.com",
     title: "How to Build a Performant Background Blurring Tool",
     image: "/sievedata/a-mountain-landscape-with-a-blurry-screen-in-front.webp",
     url: "https://www.sievedata.com/resources/how-to-build-performant-background-blurring-tool",
   },
   {
-    id: 3,
     website: "sievedata.com",
     title: "How to Automatically Blur Faces in Videos",
     image: "/sievedata/a-blurry-oval-shape.webp",
     url: "https://www.sievedata.com/resources/how-to-blur-faces-in-video",
   },
   {
-    id: 2,
     website: "sievedata.com",
     title: "Exploring SAM 2 and its Variants for Video Object Segmentation",
     image: "/sievedata/a-segmentation-map.webp",
     url: "https://www.sievedata.com/resources/exploring-sam2-variants",
   },
   {
-    id: 1,
     website: "sievedata.com",
     title: "Comparing Zero-Shot Object Detection Models: YOLO vs. Florence 2",
     image: "/sievedata/a-blurry-oval-shape (1).webp",
     url: "https://www.sievedata.com/resources/comparing-zero-shot-object-detection-yolo-florence",
   },
   {
-    id: 0,
     website: "medium.com",
     title: "Thought to Image: The Future of AI-Powered Mind Reading",
     image: "/others/Screenshot (60).png",
@@ -182,7 +174,7 @@ export default function App() {
 
         /* Vertical scrollbars */
         ::-webkit-scrollbar:vertical {
-          width: 8px;
+        width: 8px;
           height: 8px;
         }
         ::-webkit-scrollbar-track:vertical {
@@ -228,9 +220,8 @@ export default function App() {
           >
             {posts
               .slice()
-              .sort((a, b) => b.id - a.id)
-              .map(({ id, title, image, url, website }) => (
-                <Post key={`${website}-${id}`} title={title} image={image} url={url} website={website} />
+              .map(({ title, image, url, website }) => (
+                <Post key={`${website}`} title={title} image={image} url={url} website={website} />
               ))}
           </div>
         </section>
