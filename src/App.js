@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 const posts = [
   {
     website: "roboflow.com",
-    title: "AI-Powered Shelf Price Verification to Match Labels to POS Data",
+    title: "AI-Powered Shelf Price Verification for Matching Label Prices to POS Server Prices",
     image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
     url: "https://blog.roboflow.com/ai-shelf-price-verification/",
   },
@@ -16,16 +16,23 @@ const posts = [
   },
   {
     website: "roboflow.com",
-    title: "How to Build a Vision-Language Model Application with Next.js",
-    image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
-    url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
-  },
-  {
-    website: "roboflow.com",
     title: "Prompting Tips for Large Language Models with Vision Capabilities",
     image: "/roboflow/Screenshot-2025-09-08-at-4.22.43---PM.webp",
     url: "https://blog.roboflow.com/prompting-tips-for-large-language-models-with-vision/",
   },
+  {
+    website: "roboflow.com",
+    title: "The Key Tasks in Computer Vision",
+    image: "/roboflow/Screenshot-2025-09-22-at-10.42.24---AM.webp",
+    url: "https://blog.roboflow.com/key-tasks-in-computer-vision/",
+  },
+  {
+    website: "roboflow.com",
+    title: "How to Build a Vision-Language Model Application with Next.js",
+    image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
+    url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
+  },
+
   {
     website: "roboflow.com",
     title: "Automate Image Background Blurring Using SAM 2",
