@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dikshant-shah-blogs/static/css/main.e6c13ad2.css",
-    "main.js": "/dikshant-shah-blogs/static/js/main.9c233a1b.js",
+    "main.js": "/dikshant-shah-blogs/static/js/main.8e31973b.js",
     "static/js/453.9ef67c49.chunk.js": "/dikshant-shah-blogs/static/js/453.9ef67c49.chunk.js",
     "index.html": "/dikshant-shah-blogs/index.html",
     "main.e6c13ad2.css.map": "/dikshant-shah-blogs/static/css/main.e6c13ad2.css.map",
-    "main.9c233a1b.js.map": "/dikshant-shah-blogs/static/js/main.9c233a1b.js.map",
+    "main.8e31973b.js.map": "/dikshant-shah-blogs/static/js/main.8e31973b.js.map",
     "453.9ef67c49.chunk.js.map": "/dikshant-shah-blogs/static/js/453.9ef67c49.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.9c233a1b.js"
+    "static/js/main.8e31973b.js"
   ]
 }
