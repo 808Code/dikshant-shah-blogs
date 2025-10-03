@@ -22,6 +22,12 @@ const posts = [
   },
   {
     website: "roboflow.com",
+    title: "Automate Image Background Blurring Using SAM 2",
+    image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
+    url: "https://blog.roboflow.com/background-blurring-sam-2/",
+  },
+  {
+    website: "roboflow.com",
     title: "The Key Tasks in Computer Vision",
     image: "/roboflow/Screenshot-2025-09-22-at-10.42.24---AM.webp",
     url: "https://blog.roboflow.com/key-tasks-in-computer-vision/",
@@ -32,12 +38,11 @@ const posts = [
     image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
     url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
   },
-
   {
     website: "roboflow.com",
-    title: "Automate Image Background Blurring Using SAM 2",
-    image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
-    url: "https://blog.roboflow.com/background-blurring-sam-2/",
+    title: "How to Use Streamlit for Computer Vision with Roboflow",
+    image: "/roboflow/Screenshot-2025-10-03-at-10.15.03---AM.webp",
+    url: "https://blog.roboflow.com/streamlit-for-computer-vision-with-roboflow/",
   },
   {
     website: "roboflow.com",
