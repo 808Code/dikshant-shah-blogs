@@ -34,6 +34,12 @@ const posts = [
   },
   {
     website: "roboflow.com",
+    title: "How to Detect Objects in Videos",
+    image: "/roboflow/Screenshot-2025-10-06-at-11.11.47---AM.webp",
+    url: "https://blog.roboflow.com/how-to-detect-objects-in-videos/",
+  },
+  {
+    website: "roboflow.com",
     title: "How to Build a Vision-Language Model Application with Next.js",
     image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
     url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
