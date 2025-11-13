@@ -10,9 +10,33 @@ const posts = [
   },
   {
     website: "roboflow.com",
+    title: "SAM 2: Automate Image Background Blurring",
+    image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
+    url: "https://blog.roboflow.com/background-blurring-sam-2/",
+  },
+  {
+    website: "roboflow.com",
     title: "Automate Marathon Bib Number Recognition with Computer Vision",
     image: "/roboflow/Screenshot-2025-08-28-at-4.09.13---PM.webp",
     url: "https://blog.roboflow.com/automated-marathon-bib-recognition/",
+  },
+  {
+    website: "roboflow.com",
+    title: "YOLO26: Exploring the Latest Advancements in Object Detection",
+    image: "/roboflow/Screenshot-2025-10-20-at-10.26.52---AM.webp",
+    url: "https://blog.roboflow.com/yolo26/",
+  },
+    {
+    website: "roboflow.com",
+    title: "Comparing Depth Estimation Models",
+    image: "/roboflow/Screenshot-2025-11-12-at-4.21.27---PM.webp",
+    url: "https://blog.roboflow.com/depth-estimation-models/",
+  },
+  {
+    website: "roboflow.com",
+    title: "RF-DETR: Detect Objects in Videos",
+    image: "/roboflow/Screenshot-2025-10-06-at-11.11.47---AM.webp",
+    url: "https://blog.roboflow.com/how-to-detect-objects-in-videos/",
   },
   {
     website: "roboflow.com",
@@ -22,21 +46,15 @@ const posts = [
   },
   {
     website: "roboflow.com",
-    title: "Automate Image Background Blurring Using SAM 2",
-    image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
-    url: "https://blog.roboflow.com/background-blurring-sam-2/",
-  },
-  {
-    website: "roboflow.com",
     title: "The Key Tasks in Computer Vision",
     image: "/roboflow/Screenshot-2025-09-22-at-10.42.24---AM.webp",
     url: "https://blog.roboflow.com/key-tasks-in-computer-vision/",
   },
   {
     website: "roboflow.com",
-    title: "How to Detect Objects in Videos",
-    image: "/roboflow/Screenshot-2025-10-06-at-11.11.47---AM.webp",
-    url: "https://blog.roboflow.com/how-to-detect-objects-in-videos/",
+    title: "Running RF-DETR Base And Finetuned in Python",
+    image: "/roboflow/Screenshot-2025-10-13-at-1.17.16---PM.webp",
+    url: "https://blog.roboflow.com/python-object-detection/",
   },
   {
     website: "roboflow.com",
