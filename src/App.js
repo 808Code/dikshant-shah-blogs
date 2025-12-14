@@ -22,11 +22,17 @@ const posts = [
   },
   {
     website: "roboflow.com",
+    title: "RF-DETR Aerial Imagery: SOTA Performance in Speed and Detection Accuracy",
+    image: "/roboflow/Screenshot-2025-12-10-at-11.03.55---AM.webp",
+    url: "https://blog.roboflow.com/ai-for-aerial-imagery/",
+  },
+  {
+    website: "roboflow.com",
     title: "YOLO26: Exploring the Latest Advancements in Object Detection",
     image: "/roboflow/Screenshot-2025-10-20-at-10.26.52---AM.webp",
     url: "https://blog.roboflow.com/yolo26/",
   },
-    {
+  {
     website: "roboflow.com",
     title: "Comparing Depth Estimation Models",
     image: "/roboflow/Screenshot-2025-11-12-at-4.21.27---PM.webp",
