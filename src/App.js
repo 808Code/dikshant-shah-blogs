@@ -34,9 +34,9 @@ const posts = [
   },
   {
     website: "roboflow.com",
-    title: "Comparing Depth Estimation Models",
-    image: "/roboflow/Screenshot-2025-11-12-at-4.21.27---PM.webp",
-    url: "https://blog.roboflow.com/depth-estimation-models/",
+    title: "Depth Anything 3 for Depth Estimation",
+    image: "/roboflow/Screenshot-2026-01-14-at-9.34.09---AM.png",
+    url: "https://blog.roboflow.com/depth-anything-3/",
   },
   {
     website: "roboflow.com",
@@ -55,6 +55,12 @@ const posts = [
     title: "The Key Tasks in Computer Vision",
     image: "/roboflow/Screenshot-2025-09-22-at-10.42.24---AM.webp",
     url: "https://blog.roboflow.com/key-tasks-in-computer-vision/",
+  },
+  {
+    website: "roboflow.com",
+    title: "Comparing Depth Estimation Models",
+    image: "/roboflow/Screenshot-2025-11-12-at-4.21.27---PM.webp",
+    url: "https://blog.roboflow.com/depth-estimation-models/",
   },
   {
     website: "roboflow.com",
