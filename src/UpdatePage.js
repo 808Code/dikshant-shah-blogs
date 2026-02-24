@@ -121,11 +121,10 @@ export default function UpdatePage() {
     }
 
     async function uploadImageToStorage(imageUrl) {
-        const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
         const ext = imageUrl.split("?")[0].split(".").pop() || "jpg";
         const fileName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
 
-        const res = await fetch(`${supabaseUrl}/functions/v1/download-image`, {
+        const res = await fetch(`${SUPABASE_URL}/functions/v1/download-image`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ imageUrl, fileName }),
