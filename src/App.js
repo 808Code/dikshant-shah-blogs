@@ -1,173 +1,8 @@
-import React, { useEffect } from "react";
-
-// Full posts list
-const posts = [
-  {
-    website: "roboflow.com",
-    title: "AI-Powered Shelf Price Verification for Matching Label Prices to POS Server Prices",
-    image: "/roboflow/Screenshot-2025-08-21-at-1.11.18---PM.webp",
-    url: "https://blog.roboflow.com/ai-shelf-price-verification/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "SAM 2: Automate Image Background Blurring",
-    image: "/roboflow/Screenshot-2025-08-04-at-10.35.17---AM.webp",
-    url: "https://blog.roboflow.com/background-blurring-sam-2/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "Automate Marathon Bib Number Recognition with Computer Vision",
-    image: "/roboflow/Screenshot-2025-08-28-at-4.09.13---PM.webp",
-    url: "https://blog.roboflow.com/automated-marathon-bib-recognition/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "RF-DETR Aerial Imagery: SOTA Performance in Speed and Detection Accuracy",
-    image: "/roboflow/Screenshot-2025-12-10-at-11.03.55---AM.webp",
-    url: "https://blog.roboflow.com/ai-for-aerial-imagery/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "YOLO26: Exploring the Latest Advancements in Object Detection",
-    image: "/roboflow/Screenshot-2025-10-20-at-10.26.52---AM.webp",
-    url: "https://blog.roboflow.com/yolo26/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "Depth Anything 3 for Depth Estimation",
-    image: "/roboflow/Screenshot-2026-01-14-at-9.34.09---AM.png",
-    url: "https://blog.roboflow.com/depth-anything-3/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "RF-DETR: Detect Objects in Videos",
-    image: "/roboflow/Screenshot-2025-10-06-at-11.11.47---AM.webp",
-    url: "https://blog.roboflow.com/how-to-detect-objects-in-videos/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "Prompting Tips for Large Language Models with Vision Capabilities",
-    image: "/roboflow/Screenshot-2025-09-08-at-4.22.43---PM.webp",
-    url: "https://blog.roboflow.com/prompting-tips-for-large-language-models-with-vision/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "The Key Tasks in Computer Vision",
-    image: "/roboflow/Screenshot-2025-09-22-at-10.42.24---AM.webp",
-    url: "https://blog.roboflow.com/key-tasks-in-computer-vision/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "Comparing Depth Estimation Models",
-    image: "/roboflow/Screenshot-2025-11-12-at-4.21.27---PM.webp",
-    url: "https://blog.roboflow.com/depth-estimation-models/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "Running RF-DETR Base And Finetuned in Python",
-    image: "/roboflow/Screenshot-2025-10-13-at-1.17.16---PM.webp",
-    url: "https://blog.roboflow.com/python-object-detection/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "How to Build a Vision-Language Model Application with Next.js",
-    image: "/roboflow/Screenshot-2025-09-16-at-10.36.47---AM.webp",
-    url: "https://blog.roboflow.com/build-vision-applications-next-js-roboflow/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "How to Use Streamlit for Computer Vision with Roboflow",
-    image: "/roboflow/Screenshot-2025-10-03-at-10.15.03---AM.webp",
-    url: "https://blog.roboflow.com/streamlit-for-computer-vision-with-roboflow/",
-    blog_status: "available",
-  },
-  {
-    website: "roboflow.com",
-    title: "AI-Powered Invoice Analysis for Detecting Price Markups",
-    image: "/roboflow/Screenshot-2025-08-11-at-11.01.02---AM.webp",
-    url: "https://blog.roboflow.com/automated-invoice-analysis/",
-    blog_status: "available",
-  },
-
-  // Sieve Data Posts
-  {
-    website: "sievedata.com",
-    title: "Building a robust ball tracking system for sports with SAM 2",
-    image: "/sievedata/a-segmentation-map-of-sports-field-with-a-ball-bei.webp",
-    url: "https://www.linkedin.com/posts/sievedata_ball-tracking-is-a-capability-that-enables-activity-7275544709190569985-m_2Q/",
-    blog_status: "demo_only",
-  },
-  {
-    website: "sievedata.com",
-    title: "Building an Automated Background and Caption Effects Pipeline",
-    image: "/sievedata/minimalist-silhouette-of-a-person-against-a-bold-w.webp",
-    url: "https://github.com/sieve-community/auto-reel-edit",
-    blog_status: "code_only",
-  },
-  {
-    website: "sievedata.com",
-    title: "Comparing the best methods for OCR on videos",
-    image: "/sievedata/a-magnifying-glass-show-over-a-video-with-various-.webp",
-    url: "https://www.linkedin.com/posts/sievedata_high-quality-text-recognition-on-video-has-ugcPost-7284590421781991425-FkQ_/",
-    blog_status: "demo_only",
-  },
-  {
-    website: "sievedata.com",
-    title: "How to Build a Long Form Video Repurposing Tool",
-    image: "/sievedata/a-roll-of-video-tape-with-a-knife-next-to-it.webp",
-    url: "https://www.sievedata.com/resources/how-to-build-long-form-video-repurposing-tool",
-    blog_status: "unavailable",
-  },
-  {
-    website: "sievedata.com",
-    title: "How to Build a Performant Background Blurring Tool",
-    image: "/sievedata/a-mountain-landscape-with-a-blurry-screen-in-front.webp",
-    url: "https://www.sievedata.com/resources/how-to-build-performant-background-blurring-tool",
-    blog_status: "unavailable",
-  },
-  {
-    website: "sievedata.com",
-    title: "How to Automatically Blur Faces in Videos",
-    image: "/sievedata/a-blurry-oval-shape.webp",
-    url: "https://www.sievedata.com/resources/how-to-blur-faces-in-video",
-    blog_status: "unavailable",
-  },
-  {
-    website: "sievedata.com",
-    title: "Exploring SAM 2 and its Variants for Video Object Segmentation",
-    image: "/sievedata/a-segmentation-map.webp",
-    url: "https://www.sievedata.com/resources/exploring-sam2-variants",
-    blog_status: "unavailable",
-  },
-  {
-    website: "sievedata.com",
-    title: "Comparing Zero-Shot Object Detection Models: YOLO vs. Florence 2",
-    image: "/sievedata/a-blurry-oval-shape (1).webp",
-    url: "https://www.sievedata.com/resources/comparing-zero-shot-object-detection-yolo-florence",
-    blog_status: "unavailable",
-  },
-
-  // Other
-  {
-    website: "medium.com",
-    title: "Thought to Image: The Future of AI-Powered Mind Reading",
-    image: "/others/Screenshot (60).png",
-    url: "https://medium.com/@dikshant.shah2k/ai-a-new-frontier-87ca0c857898",
-    blog_status: "available",
-  },
-];
+import React, { useEffect, useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+import { supabase } from "./supabaseClient";
+import AdminLogin from "./AdminLogin";
+import UpdatePage from "./UpdatePage";
 
 const PALETTE = {
   bg: "#0b0f14",
@@ -184,8 +19,8 @@ const PALETTE = {
 function Post({ title, image, url, website, blog_status }) {
   const getStatusDisplay = (status) => {
     switch (status) {
-      case "available":
-        return { label: "Available", color: "#10b981", bg: "rgba(16, 185, 129, 0.1)" };
+      case "online":
+        return { label: "Online", color: "#10b981", bg: "rgba(16, 185, 129, 0.1)" };
       case "demo_only":
         return { label: "Demo Only", color: "#06b6d4", bg: "rgba(6, 182, 212, 0.1)" };
       case "code_only":
@@ -226,13 +61,14 @@ function Post({ title, image, url, website, blog_status }) {
     >
       <div style={{ backgroundColor: PALETTE.imgBg }}>
         <img
-          src={`${process.env.PUBLIC_URL}${image}`}
+          src={image.startsWith("http") ? image : `${process.env.PUBLIC_URL}${image}`}
           alt={title}
           style={{ width: "100%", height: 130, objectFit: "cover", display: "block" }}
+          onError={(e) => (e.currentTarget.style.display = "none")}
         />
       </div>
       <div style={{ padding: "0.5rem 1rem" }}>
-        {blog_status !== "available" && (
+        {(
           <div
             style={{
               display: "inline-block",
@@ -259,10 +95,28 @@ function Post({ title, image, url, website, blog_status }) {
   );
 }
 
-export default function App() {
+function HomePage() {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     document.title = "dikshantshah";
+    async function fetchPosts() {
+      const { data, error } = await supabase
+        .from("blogs")
+        .select("*")
+        .order("display_order", { ascending: true });
+      if (error) {
+        console.error("Error fetching posts:", error);
+      } else {
+        setPosts(data || []);
+      }
+      setLoading(false);
+    }
+    fetchPosts();
   }, []);
+
+
 
   return (
     <div
@@ -272,7 +126,7 @@ export default function App() {
         padding: "2rem",
       }}
     >
-      {/* Global styles for body, html, and scrollbars */}
+      {/* Global styles */}
       <style>{`
         html, body, #root {
           margin: 0;
@@ -282,10 +136,8 @@ export default function App() {
           width: 100%;
           height: 100%;
         }
-
-        /* Vertical scrollbars */
         ::-webkit-scrollbar:vertical {
-        width: 8px;
+          width: 8px;
           height: 8px;
         }
         ::-webkit-scrollbar-track:vertical {
@@ -295,8 +147,6 @@ export default function App() {
           background-color: ${PALETTE.border};
           border-radius: 4px;
         }
-
-        /* Horizontal scrollbars */
         ::-webkit-scrollbar:horizontal {
           height: 8px;
         }
@@ -307,7 +157,6 @@ export default function App() {
           background-color: ${PALETTE.border};
           border-radius: 4px;
         }
-
         * { scrollbar-width: thin; scrollbar-color: ${PALETTE.border} ${PALETTE.bg}; }
       `}</style>
 
@@ -320,21 +169,21 @@ export default function App() {
 
       <main>
         <section style={{ width: "100%" }}>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "nowrap",
-              gap: "1rem",
-              overflowX: "auto",
-              padding: "1rem 0",
-            }}
-          >
-            {posts
-              .slice()
-              .sort((a, b) => (a.blog_status === "unavailable") - (b.blog_status === "unavailable"))
-              .map(({ title, image, url, website, blog_status }) => (
+          {loading ? (
+            <p style={{ color: PALETTE.subtext, textAlign: "center" }}>Loading blogs...</p>
+          ) : (
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                gap: "1rem",
+                overflowX: "auto",
+                padding: "1rem 0",
+              }}
+            >
+              {posts.map(({ id, title, image, url, website, blog_status }) => (
                 <Post
-                  key={`${website}-${title}`}
+                  key={id}
                   title={title}
                   image={image}
                   url={url}
@@ -342,7 +191,8 @@ export default function App() {
                   blog_status={blog_status}
                 />
               ))}
-          </div>
+            </div>
+          )}
         </section>
       </main>
 
@@ -357,5 +207,24 @@ export default function App() {
         ☮︎
       </footer>
     </div>
+  );
+}
+
+function AdminRoute() {
+  const [authed, setAuthed] = useState(sessionStorage.getItem("admin_auth") === "true");
+
+  if (!authed) {
+    return <AdminLogin onLogin={() => setAuthed(true)} />;
+  }
+
+  return <UpdatePage />;
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/update" element={<AdminRoute />} />
+    </Routes>
   );
 }
