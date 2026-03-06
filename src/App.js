@@ -111,8 +111,6 @@ function HomePage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Toggle to show/hide the Experience section
-  const SHOW_EXPERIENCE = false;
 
   useEffect(() => {
     document.title = "dikshant shah — resume";
@@ -156,18 +154,18 @@ function HomePage() {
     </div>
   );
 
-  const ExperienceItem = ({ company, role, years, description }) => (
+  const ProjectItem = ({ title, description, url, subtitle }) => (
     <div style={{ marginBottom: "2rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", marginBottom: "0.5rem" }}>
-        <div>
-          <h3 style={{ fontSize: "1.1rem", fontWeight: "600", display: "inline", marginRight: "0.75rem", color: PALETTE.text }}>{company}</h3>
-          <span style={{ fontSize: "0.95rem", color: PALETTE.subtext, fontStyle: "italic" }}>{role}</span>
-        </div>
-        <span style={{ fontSize: "0.9rem", color: PALETTE.muted, fontFamily: "'JetBrains Mono', monospace" }}>{years}</span>
+        <h3 style={{ fontSize: "1rem", fontWeight: "500", margin: 0, color: PALETTE.text }}>
+          {title}
+        </h3>
+        {subtitle && <span style={{ fontSize: "0.9rem", color: PALETTE.muted, fontFamily: "'JetBrains Mono', monospace" }}>{subtitle}</span>}
       </div>
       <p style={{ fontSize: "0.95rem", color: PALETTE.subtext, margin: 0 }}>{description}</p>
     </div>
   );
+
 
   return (
     <div
@@ -189,7 +187,7 @@ function HomePage() {
         a { color: ${PALETTE.accent}; text-decoration: none; transition: opacity 0.2s; border-bottom: 1px solid transparent; }
         a:hover { opacity: 0.8; border-bottom: 1px solid ${PALETTE.accent}; }
         ::-webkit-scrollbar { width: 8px; height: 8px; }
-        ::-webkit-scrollbar-track { background: ${PALETTE.bg}; }
+        ::-webkit-scrollbar-track { background: ${PALETTE.bg}; margin: 0 1.5rem; }
         ::-webkit-scrollbar-thumb { background: ${PALETTE.border}; border-radius: 4px; }
         ul { margin: 0.5rem 0; padding-left: 1.2rem; color: ${PALETTE.subtext}; fontSize: 0.95rem; }
         li { margin-bottom: 0.25rem; }
@@ -246,27 +244,8 @@ function HomePage() {
               </span>
             </p>
             <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "1rem", marginBottom: "0" }}>
-
               Feel free to reach out via <a href="mailto:dikshant.shah2k@gmail.com">email</a>.
             </p>
-
-            {SHOW_EXPERIENCE && (
-              <>
-                <SectionTitle>Experience</SectionTitle>
-                <ExperienceItem
-                  company="Roboflow"
-                  role="ML Blog Contributor"
-                  years="Aug 2025 — Present"
-                  description="I write developer guides on machine learning use cases in sports, retail, and image editing AI using Roboflow Workflows."
-                />
-                <ExperienceItem
-                  company="Sieve"
-                  role="AI Developer Relations Engineer"
-                  years="Dec 2024 — Apr 2025"
-                  description="I wrote about Sieve's developer tools and the different video AI pipelines I built using them. My work focused on showing how these tools help developers streamline workflows, enhance video processing, and unlock new possibilities for innovative projects."
-                />
-              </>
-            )}
 
             <SectionTitle>Articles</SectionTitle>
           </ContentWrapper>
@@ -313,6 +292,28 @@ function HomePage() {
               </div>
             )}
           </div>
+
+          <ContentWrapper>
+            <SectionTitle>Personal Projects</SectionTitle>
+            <ProjectItem
+              title="AI Powered Gameplay Commentary"
+              description={
+                <>
+                  An AI-powered gameplay commentary pipeline using ElevenLabs, LipSync, and an LLM that takes a gameplay video and adds commentary in the style of a chosen celebrity. (
+                  <a href="https://www.youtube.com/watch?v=tEiDzAKA7NQ" target="_blank" rel="noreferrer" style={{ color: PALETTE.accent }}>demo</a>)
+                </>
+              }
+            />
+            <ProjectItem
+              title={
+                <>
+                  Screenshot Editor (
+                  <a href="https://screenshoteditor.live/" target="_blank" rel="noreferrer" style={{ color: PALETTE.accent }}>screenshoteditor.live</a>)
+                </>
+              }
+              description="Web-based tool for annotating and editing screenshots, particularly useful for developer advocates, technical writers, educators, and anyone who needs to create clear, shareable visual content."
+            />
+          </ContentWrapper>
         </main>
 
         <ContentWrapper>
@@ -325,8 +326,10 @@ function HomePage() {
               fontSize: "0.9rem",
             }}
           >
-            {/* hobbies: music production, reading history ☮︎ */}
-            build something that people truly want. ☮︎
+            <div style={{ display: "inline-block", borderTop: `1px solid ${PALETTE.border}`, paddingTop: "1rem", paddingLeft: "4rem", paddingRight: "4rem" }}>
+              build something that people truly want.
+              ☮︎
+            </div>
 
 
           </footer>
