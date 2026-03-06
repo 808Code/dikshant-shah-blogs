@@ -203,29 +203,32 @@ function HomePage() {
             <p style={{ color: PALETTE.subtext, fontSize: "1.1rem", margin: "0 0 1rem 0", fontWeight: "500" }}>
               AI Developer Advocate, B.E. Software Engineering (Graduate)
             </p>
-            <div style={{ display: "flex", justifyContent: "left", flexWrap: "wrap", gap: "1rem", color: PALETTE.subtext, fontSize: "0.95rem" }}>
-              <a href="mailto:dikshant.shah2k@gmail.com">dikshant.shah2k@gmail.com</a>
-              <span>•</span>
-              <a href="https://www.linkedin.com/in/dikshant-shah-b3353324b/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <span>•</span>
-              <a href="https://github.com/808Code" target="_blank" rel="noreferrer">GitHub</a>
-              <span>•</span>
-              <a href="https://x.com/DikshantSh8620" target="_blank" rel="noreferrer">Twitter(X)</a>
-              <span>•</span>
-              <span>Kathmandu, Nepal</span>
-              <span>•</span>
-              <a
-                href={`${process.env.PUBLIC_URL}/Dikshant Shah Resume.pdf`}
-                download="Dikshant_Shah_Resume.pdf"
-                style={{ color: PALETTE.accent }}
-              >
-                View my Resume 📄
-              </a>
+            <div style={{ display: "inline-block" }}>
+              <div style={{ display: "flex", justifyContent: "left", flexWrap: "wrap", gap: "1rem", color: PALETTE.subtext, fontSize: "0.95rem" }}>
+                <a href="mailto:dikshant.shah2k@gmail.com">dikshant.shah2k@gmail.com</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/dikshant-shah-b3353324b/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <span>•</span>
+                <a href="https://github.com/808Code" target="_blank" rel="noreferrer">GitHub</a>
+                <span>•</span>
+                <a href="https://x.com/DikshantSh8620" target="_blank" rel="noreferrer">Twitter(X)</a>
+                <span>•</span>
+                <span>Kathmandu, Nepal</span>
+                <span>•</span>
+                <a
+                  href={`${process.env.PUBLIC_URL}/Dikshant Shah Resume.pdf`}
+                  download="Dikshant_Shah_Resume.pdf"
+                  style={{ color: PALETTE.accent }}
+                >
+                  View my Resume 📄
+                </a>
+              </div>
+              <div style={{ borderTop: `1px solid ${PALETTE.border}`, marginTop: "1rem", width: "100%" }} />
             </div>
           </header>
         </ContentWrapper>
 
-        <main>
+        <main style={{ marginTop: "0.5rem" }}>
           <ContentWrapper>
             <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "0", marginBottom: "0" }}>
               Hi, I’m Dikshant Shah. I have 2 years of experience in Machine Learning, Computer Vision, and LLM pipelines. I create tutorials that help developers build AI agents in areas like sports, document understanding, and video editing.
@@ -297,13 +300,13 @@ function HomePage() {
           <ContentWrapper>
             <SectionTitle>Personal Projects</SectionTitle>
             <ProjectItem
-              title="AI Powered Gameplay Commentary"
-              description={
+              title={
                 <>
-                  An AI-powered gameplay commentary pipeline using ElevenLabs, LipSync, and an LLM that takes a gameplay video and adds commentary in the style of a chosen celebrity. (
+                  AI Powered Gameplay Commentary (
                   <a href="https://www.youtube.com/watch?v=tEiDzAKA7NQ" target="_blank" rel="noreferrer" style={{ color: PALETTE.accent }}>demo</a>)
                 </>
               }
+              description="An AI-powered gameplay commentary pipeline using ElevenLabs, LipSync, and an LLM that takes a gameplay video and adds commentary in the style of a chosen celebrity."
             />
             <ProjectItem
               title={
@@ -328,7 +331,7 @@ function HomePage() {
             }}
           >
             <div style={{ display: "inline-block", borderTop: `1px solid ${PALETTE.border}`, paddingTop: "1rem", paddingLeft: "4rem", paddingRight: "4rem" }}>
-              build something that people truly want.
+              hobbies: music production, reading history, and zombies.
               ☮︎
             </div>
 
