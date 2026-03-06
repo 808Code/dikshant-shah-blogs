@@ -167,7 +167,7 @@ function HomePage() {
     >
       {/* Global styles */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
         html, body, #root {
           margin: 0;
           padding: 0;
@@ -204,6 +204,14 @@ function HomePage() {
               <a href="https://x.com/DikshantSh8620" target="_blank" rel="noreferrer">Twitter(X)</a>
               <span>•</span>
               <span>Kathmandu, Nepal</span>
+              <span>•</span>
+              <a
+                href={`${process.env.PUBLIC_URL}/Dikshant Shah Resume.pdf`}
+                download="Dikshant_Shah_Resume.pdf"
+                style={{ color: PALETTE.accent }}
+              >
+                View my Resume 📄
+              </a>
             </div>
           </header>
         </ContentWrapper>
@@ -211,10 +219,24 @@ function HomePage() {
         <main>
           <ContentWrapper>
             <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "0", marginBottom: "0" }}>
-              Hi, I'm Dikshant Shah. I have 2 years of experience working with Machine Learning, Computer Vision, and LLM pipelines across startups. I tutorials that help developers build AI-powered agents in domains like sports, document understanding, and video editing.
+              Hi, I’m Dikshant Shah. I have 2 years of experience in Machine Learning, Computer Vision, and LLM pipelines. I create tutorials that help developers build AI agents in areas like sports, document understanding, and video editing.
+            </p>
+
+            <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "1rem", marginBottom: "0" }}>
+              Previously, I worked at <a href="https://www.sieve.ai/" target="_blank" rel="noreferrer">Sieve</a> (Dec 2024 - Apr 2025) as an AI Developer Relations engineer and currently work as an ML blog contributor at <a href="https://roboflow.com/" target="_blank" rel="noreferrer">Roboflow</a> (Jul 2025 - Present).{" "}
+              <span style={{
+                color: "#ffffff",
+                fontWeight: "500",
+                fontFamily: "'Playfair Display', serif",
+                fontStyle: "italic",
+                fontSize: "1.1rem"
+              }}>
+                I’m currently looking to apply my skills at the intersection of gaming and AI.
+              </span>
             </p>
             <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "1rem", marginBottom: "0" }}>
-              I'm currently looking to apply my skills at the intersection of gaming and AI. Feel free to reach out via <a href="mailto:dikshant.shah2k@gmail.com">email</a>.
+
+              Feel free to reach out via <a href="mailto:dikshant.shah2k@gmail.com">email</a>.
             </p>
 
             {SHOW_EXPERIENCE && (
@@ -292,7 +314,10 @@ function HomePage() {
               fontSize: "0.9rem",
             }}
           >
+            {/* hobbies: music production, reading history ☮︎ */}
             build something that people truly want. ☮︎
+
+
           </footer>
         </ContentWrapper>
       </div>
