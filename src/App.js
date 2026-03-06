@@ -232,13 +232,14 @@ function HomePage() {
             </p>
 
             <p style={{ color: PALETTE.subtext, fontSize: "1rem", lineHeight: "1.8", marginTop: "1rem", marginBottom: "0" }}>
-              Previously, I worked at <a href="https://www.sieve.ai/" target="_blank" rel="noreferrer">Sieve</a> (Dec 2024 - Apr 2025) as an AI Developer Relations engineer and currently work as an ML blog contributor at <a href="https://roboflow.com/" target="_blank" rel="noreferrer">Roboflow</a> (Jul 2025 - Present).{" "}
+              Previously, I worked at <a href="https://www.sieve.ai/" target="_blank" rel="noreferrer">Sieve</a> (Dec 2024 - Apr 2025) as an AI Developer Relations engineer and currently work as an ML blog contributor at <a href="https://roboflow.com/" target="_blank" rel="noreferrer">Roboflow</a> (Jul 2025 - Present).
               <span style={{
                 color: "#ffffff",
                 fontWeight: "500",
                 fontFamily: "'Playfair Display', serif",
                 fontStyle: "italic",
-                fontSize: "1.1rem"
+                fontSize: "1.1rem",
+                marginLeft: "0.4rem"
               }}>
                 I’m currently looking to apply my skills at the intersection of gaming and AI.
               </span>
