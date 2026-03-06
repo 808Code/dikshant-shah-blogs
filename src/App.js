@@ -4,6 +4,18 @@ import { supabase } from "./supabaseClient";
 import AdminLogin from "./AdminLogin";
 import UpdatePage from "./UpdatePage";
 
+// Self-hosted fonts (no external CDN requests)
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/400-italic.css";
+import "@fontsource/playfair-display/500-italic.css";
+import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/700-italic.css";
+
 const PALETTE = {
   bg: "#0b0f14",
   text: "#e5e7eb",
@@ -167,7 +179,6 @@ function HomePage() {
     >
       {/* Global styles */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
         html, body, #root {
           margin: 0;
           padding: 0;
