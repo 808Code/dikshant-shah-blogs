@@ -71,7 +71,7 @@ function Post({ title, image, url, website, blog_status }) {
       onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
       title={`${title} — ${website}`}
     >
-      <div style={{ backgroundColor: PALETTE.imgBg }}>
+      <div style={{ backgroundColor: PALETTE.imgBg, width: "100%", height: 130 }}>
         <img
           src={image.startsWith("http") ? image : `${process.env.PUBLIC_URL}${image}`}
           alt={title}
@@ -191,6 +191,9 @@ function HomePage() {
         ::-webkit-scrollbar-thumb { background: ${PALETTE.border}; border-radius: 4px; }
         ul { margin: 0.5rem 0; padding-left: 1.2rem; color: ${PALETTE.subtext}; fontSize: 0.95rem; }
         li { margin-bottom: 0.25rem; }
+        @font-face { font-family: 'Inter'; font-display: block; }
+        @font-face { font-family: 'JetBrains Mono'; font-display: block; }
+        @font-face { font-family: 'Playfair Display'; font-display: block; }
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
@@ -254,10 +257,10 @@ function HomePage() {
             <SectionTitle>Articles</SectionTitle>
           </ContentWrapper>
 
-          <div style={{ width: "100%" }}>
+          <div style={{ width: "100%", minHeight: 230 }}>
             {loading ? (
               <ContentWrapper>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "260px", width: "100%" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: 230, width: "100%" }}>
                   <div
                     style={{
                       width: "28px",
