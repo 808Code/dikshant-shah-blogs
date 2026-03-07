@@ -231,7 +231,7 @@ function HomePage() {
           <header style={{ textAlign: "left", marginBottom: "3rem" }}>
             <h1 style={{ fontSize: "3.5rem", fontWeight: "700", margin: "0 0 0.5rem 0", color: PALETTE.text, letterSpacing: "-0.02em", fontFamily: "'Times New Roman', Times, serif" }}>Dikshant Shah</h1>
             <p style={{ color: PALETTE.subtext, fontSize: "1.1rem", margin: "0 0 1rem 0", fontWeight: "500" }}>
-              AI Developer Advocate, B.E. in Software Engineering (Pokhara University, GPA: 3.44)
+              AI Developer Advocate, B.E. in Software Engineering (Pokhara University, GPA: 3.44/4)
             </p>
             <div style={{ display: "inline-block" }}>
               <div style={{ display: "flex", justifyContent: "left", flexWrap: "wrap", gap: "1rem", color: PALETTE.subtext, fontSize: "0.95rem" }}>
