@@ -201,6 +201,29 @@ function HomePage() {
         @keyframes spin {
           to { transform: rotate(360deg); }
         }
+        .emoji-tip {
+          position: relative;
+          cursor: default;
+        }
+        .emoji-tip::after {
+          content: attr(data-tip);
+          position: absolute;
+          bottom: 120%;
+          left: 50%;
+          transform: translateX(-50%);
+          background: #1e293b;
+          color: #e5e7eb;
+          font-size: 0.75rem;
+          padding: 3px 8px;
+          border-radius: 4px;
+          white-space: nowrap;
+          pointer-events: none;
+          opacity: 0;
+          transition: opacity 0.1s;
+        }
+        .emoji-tip:hover::after {
+          opacity: 1;
+        }
       `}</style>
 
       <div style={{ padding: "3rem 0", opacity: fontsLoaded ? 1 : 0, transition: "opacity 0.15s ease-in" }}>
@@ -220,7 +243,7 @@ function HomePage() {
                 <span>•</span>
                 <a href="https://x.com/DikshantSh8620" target="_blank" rel="noreferrer">Twitter(X)</a>
                 <span>•</span>
-                <span>Kathmandu, Nepal</span>
+                <span><span className="emoji-tip" data-tip="Namaste">🙏</span> <span className="emoji-tip" data-tip="Mt. Everest">🏞️</span> <span className="emoji-tip" data-tip="Chitwan Rhino">🦏</span> Kathmandu, Nepal</span>
                 <span>•</span>
                 <a
                   href={`${process.env.PUBLIC_URL}/Dikshant Shah Resume.pdf`}
