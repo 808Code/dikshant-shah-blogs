@@ -305,7 +305,7 @@ function HomePage() {
           </div>
 
           <ContentWrapper>
-            <SectionTitle>Personal Projects</SectionTitle>
+            <SectionTitle>Projects</SectionTitle>
             <ProjectItem
               title={
                 <>
