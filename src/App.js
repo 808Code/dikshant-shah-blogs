@@ -241,7 +241,7 @@ function HomePage() {
                 <span>•</span>
                 <a href="https://github.com/808Code" target="_blank" rel="noreferrer">GitHub</a>
                 <span>•</span>
-                <a href="https://x.com/DikshantSh8620" target="_blank" rel="noreferrer">Twitter(X)</a>
+                <a href="https://x.com/DikshantSh8620/status/2004156195591082000" target="_blank" rel="noreferrer">Twitter(X)</a>
                 <span>•</span>
                 <span><span className="emoji-tip" data-tip="Namaste">🙏</span> <span className="emoji-tip" data-tip="Mt. Everest">🏞️</span> <span className="emoji-tip" data-tip="Chitwan Rhino">🦏</span> Kathmandu, Nepal</span>
                 <span>•</span>
