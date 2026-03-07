@@ -110,7 +110,11 @@ function Post({ title, image, url, website, blog_status }) {
 function HomePage() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [fontsLoaded, setFontsLoaded] = useState(false);
 
+  useEffect(() => {
+    document.fonts.ready.then(() => setFontsLoaded(true));
+  }, []);
 
   useEffect(() => {
     document.title = "dikshant shah — resume";
@@ -199,7 +203,7 @@ function HomePage() {
         }
       `}</style>
 
-      <div style={{ padding: "3rem 0" }}>
+      <div style={{ padding: "3rem 0", opacity: fontsLoaded ? 1 : 0, transition: "opacity 0.15s ease-in" }}>
         <ContentWrapper>
           <header style={{ textAlign: "left", marginBottom: "3rem" }}>
             <h1 style={{ fontSize: "3.5rem", fontWeight: "700", margin: "0 0 0.5rem 0", color: PALETTE.text, letterSpacing: "-0.02em", fontFamily: "'Times New Roman', Times, serif" }}>Dikshant Shah</h1>
