@@ -281,7 +281,7 @@ function HomePage() {
               Feel free to reach out via <a href="mailto:dikshant.shah2k@gmail.com">email</a>.
             </p>
 
-            <SectionTitle>Articles</SectionTitle>
+            <SectionTitle>Guides</SectionTitle>
           </ContentWrapper>
 
           <div style={{ width: "100%", minHeight: 230 }}>
